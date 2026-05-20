@@ -1,0 +1,1 @@
+import{_ as t}from"./CC2bi4JO.js";import{_ as a,o as s,c,a as n,b as _,H as d}from"./BA5X-Pbb.js";const r={},l={class:"layout"},f={class:"layout-nav"};function p(e,u){const o=t;return s(),c("div",l,[n("div",f,[_(o)]),d(e.$slots,"default",{},void 0,!0)])}const v=a(r,[["render",p],["__scopeId","data-v-9d660de8"]]);export{v as default};
