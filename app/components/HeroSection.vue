@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 
+const baseURL = useRuntimeConfig().app.baseURL
+
 const ctaBtn = ref<HTMLButtonElement>()
 const ctaSize = ref({ w: 0, h: 0 })
 let ctaRO: ResizeObserver | null = null
@@ -63,14 +65,14 @@ onUnmounted(() => {
     <div class="hero-content">
       <div class="right-bloc">
         <picture>
-          <source media="(max-width: 768px)" srcset="/images/hero/responsive-mobile-img.png" />
+          <source media="(max-width: 768px)" :srcset="`${baseURL}images/hero/responsive-mobile-img.png`" />
           <img
-            src="/images/hero/hero-banner-img.png"
+            :src="`${baseURL}images/hero/hero-banner-img.png`"
             alt="Khan Kluay Thai Cuisine"
             class="hero-img"
           />
         </picture>
-        <p class="cuisine-text">Cuisine thaïlandaise<img src="/flag-design.svg" alt="" class="cuisine-flag" />authentique</p>
+        <p class="cuisine-text">Cuisine thaïlandaise<img :src="`${baseURL}flag-design.svg`" alt="" class="cuisine-flag" />authentique</p>
         <button ref="ctaBtn" class="scroll-cta" @click="scrollToPhilosophy">
           <svg
             v-if="ctaSize.w > 0 && ctaSize.h > 0"
@@ -97,7 +99,7 @@ onUnmounted(() => {
 
     <div class="hero-display-title">
       <img
-        src="/logos/logo-khan-kluay-v2.svg"
+        :src="`${baseURL}logos/logo-khan-kluay-v2.svg`"
         alt="Khan Kluay"
         class="khan-kluay-logo"
       />
