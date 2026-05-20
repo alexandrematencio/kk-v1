@@ -1,0 +1,1 @@
+import{_ as t}from"./BwZecyZ2.js";import{_ as a,o as s,c,a as n,b as _,G as d}from"./Cm5ZL7nq.js";const r={},l={class:"layout"},f={class:"layout-nav"};function p(e,u){const o=t;return s(),c("div",l,[n("div",f,[_(o)]),d(e.$slots,"default",{},void 0,!0)])}const v=a(r,[["render",p],["__scopeId","data-v-9d660de8"]]);export{v as default};
