@@ -215,11 +215,15 @@ onUnmounted(() => {
   stroke-linejoin: round;
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  transition: stroke-dashoffset 0.607s cubic-bezier(0.65, 0, 0.35, 1);
+  /* Hidden at rest so the zero-length dash at the path seam never shows */
+  visibility: hidden;
+  transition: stroke-dashoffset 0.607s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0.607s;
 }
 
 .scroll-cta:hover .cta-border-path {
   stroke-dashoffset: 0;
+  visibility: visible;
+  transition: stroke-dashoffset 0.607s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0s;
 }
 
 .cta-text {

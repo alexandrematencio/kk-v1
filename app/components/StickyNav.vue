@@ -203,12 +203,15 @@ watch(isMenuOpen, (open) => {
 @media (max-width: 768px) {
   .sticky-nav-inner {
     padding: 10px 16px;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
-  .sticky-brand,
   .sticky-items {
     display: none;
+  }
+
+  .sticky-brand-logo {
+    height: 32px;
   }
 
   .burger-btn {
